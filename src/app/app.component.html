@@ -1,2 +1,37 @@
-<h1>{{title}}</h1>
-<app-heroes></app-heroes>
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-sm text-center">
+            <h1>{{title}}</h1>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-sm text-center">
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-sm btn-outline-primary" (click)="setToday()">HOJE</button>
+                        </div>
+                        <input class="form-control" placeholder="dd/mm/yyyy" name="d2" #c2="ngModel"
+                            [(ngModel)]="dataSelecionada" ngbDatepicker #d2="ngbDatepicker">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary " (click)="d2.toggle()" type="button">#
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm text-center">
+            Há {{days}} dias.
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-sm text-center">
+            FOTUS_S2
+        </div>
+    </div>
+</div>
