@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgbCalendar, NgbDateAdapter } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -8,24 +7,9 @@ import { NgbCalendar, NgbDateAdapter } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class AppComponent {
-  dataFixa = "06/10/2018";
-  title = 'Bandi i Teté';
-  dataSelecionada: string;
-  days: number;
+  title = "Artes e peripécias do BobGug";
+  images = [944, 1011, 984, 971].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
-  imagens: any = {
-    path: "../assets/img1.jpg",
-    data: "04/02/2019"
-  }
-
-  constructor(
-    private ngbCalendar: NgbCalendar,
-    private dateAdapter: NgbDateAdapter<string>) { }
-
-  setToday() {
-    this.dataSelecionada = this.dateAdapter.toModel(this.ngbCalendar.getToday())!;
-    this.days = 55
-  }
-
+  constructor() { }
 
 }
